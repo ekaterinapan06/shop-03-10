@@ -5,6 +5,7 @@
     --pink-button: #F26376;
     --light-black: #222224;
     --white: #FBFBFB;
+    --light-pink: #F8F3F4;
 }
 
 
@@ -47,11 +48,60 @@ body{
 }
 
 .header__menu{
+    position: absolute;
+    width: 232px;
+    top: 100%;
+    right: 0;
+    background: #FFFFFF;
     display: none;
+    /*padding: 37px 0 0 34px;*/
+}
+
+.close_menu{
+    background-color: transparent;
+    border: none;
+    background-image: url(..//img/close_menu.svg);
+    width: 12px;
+    height: 12px;
+    align-self: flex-end;
+}
+
+.menu__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 15px 33px 33px;
+}
+
+#burger:active +.header__menu{
+    display: block;
+}
+
+#burger:hover +.header__menu,
+#burger:focus +.header__menu{
+    display: block;
+}
+
+.header__title{
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.menu-sub-item__title{
+    color: var(--dark-pink);
+    text-transform: uppercase;
+}
+
+.menu-sub-item__item{
+    color: #6F6E6E;
+    text-transform: capitalize;
 }
 
 .header__box{
     display: flex;
+    position: relative;
 }
 
 .header__logo{
@@ -122,6 +172,11 @@ body{
     align-items: center;
 }
 
+.sale__item:hover,
+.sale__item:active{
+    opacity: 0.5;
+}
+
 .women{
     background-image: url(../img/for_women.jpg);
 }
@@ -147,6 +202,12 @@ body{
     text-align: center;
 }
 
+.sale__link:hover,
+.sale__link:active{
+    border:solid 1px #FFFFFF;
+    padding: 10px 25px 10px 25px;
+}
+
 .sale__text{
     color: #FFFFFF;
     font-size: 16px;
@@ -157,11 +218,14 @@ body{
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    color: #F16D7F;
+    color: var(--dark-pink);
 }
 
 .product{
     padding: 0 0 96px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .product__title{
@@ -188,11 +252,59 @@ body{
     height: 582px;
     background-color: #F8F8F8;
     margin: 0 0 30px 0;
+    list-style-type: none;
 }
 
 .card{
     text-decoration: none;
-    
+}
+
+.card__img-wrp{
+    position: relative;
+}
+
+.card__img-wrp::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.card:hover .card__button,
+.card:hover .card__button,
+.card:hover .card__img-wrp::before{
+    display: block;
+} 
+
+.card__button{
+    display: none;
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 13px 13px 13px 45px;
+    background-color: transparent;
+    border:solid 1px #FFFFFF;
+    color: #FFFFFF;
+}
+
+.card__button:hover,
+.card__button:active{
+    background-color: #757575;
+}
+
+.card__button::before{
+    position: absolute;
+    background-image: url(../img/card_button.svg);
+    height: 24px;
+    width: 26px;
+    content: "";
+    display: block;
+    top: 8px;
+    left: 6px;
 }
 
 .card__title{
@@ -302,6 +414,18 @@ body{
     text-transform: uppercase;
 }
 
+.feedback__form{
+    
+}
+
+.feedback__form-input{
+    
+}
+
+.feedback__form-button{
+
+}
+
 .page-footer{
     /*width: 100%;*/
     background-color: var(--light-black);
@@ -311,10 +435,141 @@ body{
 .page-footer__wrp{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
     align-items: center;
     min-height: 79px;
 }
 
 .page-footer__copy{
     color: var(--white);
+}
+
+.social__ico:hover,
+.social__ico:active{
+    opacity: 0.5;
+}
+
+
+.page__header{
+    height: 148px;
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+}
+
+.page__title{
+    text-transform: uppercase;
+    color: var(--dark-pink);
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.registration__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0 0 0;
+}
+
+.form__item{
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.form__block{
+    margin: 0 0 20px 0;
+}
+
+.form__item-legend{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--black);
+}
+
+/*.form__input-sex{
+    display: none;
+    position: relative;
+}*/
+
+.form__label{
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    position: relative;
+    padding: 0 0px 0 0px;
+    margin: 0 0 0 0;
+}
+/*
+.form__label::before{
+    background-image: url(../img/sex_circle.svg);
+    width: 17px;
+    height: 17px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+}*/
+
+
+.form__button{
+    background-color: var(--dark-pink);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 167px;
+    height: 50px;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0px 15px 0px 0px;
+}
+
+.form__button::after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url(../img/arrow_button.svg);
+    width: 17px;
+    height: 10px;
+}
+
+.registration__form{
+    max-width: 360px;
+}
+
+.registration__info{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    max-width: 652px;
+}
+
+.registration__info-title{
+    text-transform: uppercase;
+}
+
+.registration__info-text{
+    margin: 20px 0 20px 0;
+}
+
+.registration__info-list{
+    list-style-type: none;
+}
+
+.list__item{
+    position: relative;
+    margin: 0 0 15px 40px;
+
+}
+
+.list__item::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -34px;
+    width: 20px;
+    height: 16px;
+    background-image: url(../img/mark_reg.svg);
 }
