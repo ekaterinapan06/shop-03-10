@@ -82,8 +82,10 @@
                 <form class="registration__form" action="">
                     <fieldset class="form__block">
                         <legend class="form__item form__item-legend">Your Name</legend>
-                        <input class="form__item" type="text" placeholder="First Name">
-                        <input class="form__item" type="text" placeholder="Last Name">
+                        <input class="form__item" id="first-name" type="text" placeholder="First Name">
+                        <label for="first-name" class="visually-hidden">Email</label>
+                        <input class="form__item" id="last-name" type="text" placeholder="Last Name">
+                        <label for="last-name" class="visually-hidden">Last Name</label>
                         <div class="form__item">
                             <input class="form__input-sex" type="radio" id="male" name="sex" value="">
                             <label class="form__label" for="male">Male</label>
@@ -93,8 +95,10 @@
                     </fieldset> 
                     <fieldset class="form__block">
                         <legend class="form__item form__item-legend">Login details</legend>
-                        <input class="form__item" type="email" required placeholder="Email>
-                        <input class="form__item" type="password" required placeholder="Password">
+                        <input class="form__item" id="your-mail" type="email" required placeholder="Email>
+                        <label for="your-mail" class="visually-hidden">Your email</label>
+                        <input class="form__item" id="your-password" type="password" required placeholder="Password">
+                        <label for="your-password" class="visually-hidden">Your Password</label>
                         <legend class="form__item">Please use 8 or more characters, with at least 1 number and a mixture
                             of uppercase and lowercase letters</legend>
                     </fieldset>
@@ -128,7 +132,8 @@
                         <h3 class="feedback__title">subscribe</h3>
                         <p class="feedback__text">for our newletter and promotion</p>
                         <form class="feedback__form" action="#">
-                            <input class="feedback__form-input" type="email" required placeholder="Enter Your Email">
+                            <input class="feedback__form-input" id="main-input" type="email" required placeholder="Enter Your Email">
+                            <label for="main-input" class="visually-hidden">Email</label>
                             <button class="feedback__form-button" type="submit">Subscribe</button>
                         </form>
                     </div>
@@ -141,17 +146,20 @@
                 &#169 2021 Brand All Rights Reserved.
             </p>
             <div class="page-footer__social">
-                <svg class="social__ico" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-                    fill="none">
-                    <path class="ico__fon" d="M31.4506 0H0V32H31.4506V0Z" fill="white" />
-                    <path
-                        d="M19.0884 16.28L19.5069 13.616H16.8902V11.8873C16.8902 11.1585 17.2557 10.4481 18.4277 10.4481H19.6172V8.17997C19.6172 8.17997 18.5377 8 17.5056 8C15.3507 8 13.9422 9.27593 13.9422 11.5857V13.616H11.5469V16.28H13.9422V22.72H16.8902V16.28H19.0884Z"
-                        fill="black" />
-                </svg>
-                <img class="social__ico" src="./img/insta.svg" alt="instagram_icon">
-                <img class="social__ico" src="./img/pint.svg" alt="pinterest_icon">
-                <img class="social__ico" src="./img/twitter.svg" alt="twitter_icon">
-
+                <a href="#">
+                    <svg class="social__ico" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path class="ico__fon" d="M31.4506 0H0V32H31.4506V0Z" fill="white"/>
+                    <path d="M19.0884 16.28L19.5069 13.616H16.8902V11.8873C16.8902 11.1585 17.2557 10.4481 18.4277 10.4481H19.6172V8.17997C19.6172 8.17997 18.5377 8 17.5056 8C15.3507 8 13.9422 9.27593 13.9422 11.5857V13.616H11.5469V16.28H13.9422V22.72H16.8902V16.28H19.0884Z" fill="black"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <img class="social__ico" src="./img/insta.svg" alt="instagram_icon">
+                </a>
+                <a href="#">
+                    <img class="social__ico" src="./img/pint.svg" alt="pinterest_icon">
+                </a>
+                <a href="#"><img class="social__ico" src="./img/twitter.svg" alt="twitter_icon">
+                </a>
             </div>
 
         </div>
